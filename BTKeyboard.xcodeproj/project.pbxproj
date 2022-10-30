@@ -11,6 +11,8 @@
 		9034342D290E831300BC9251 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034342C290E831300BC9251 /* ContentView.swift */; };
 		9034342F290E831500BC9251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9034342E290E831500BC9251 /* Assets.xcassets */; };
 		90343433290E831500BC9251 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90343432290E831500BC9251 /* Preview Assets.xcassets */; };
+		9034343B290E83FC00BC9251 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9034343A290E83FC00BC9251 /* AudioKit */; };
+		9034343E290E849F00BC9251 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 9034343D290E849F00BC9251 /* Keyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9034343B290E83FC00BC9251 /* AudioKit in Frameworks */,
+				9034343E290E849F00BC9251 /* Keyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,10 @@
 			dependencies = (
 			);
 			name = BTKeyboard;
+			packageProductDependencies = (
+				9034343A290E83FC00BC9251 /* AudioKit */,
+				9034343D290E849F00BC9251 /* Keyboard */,
+			);
 			productName = BTKeyboard;
 			productReference = 90343427290E831300BC9251 /* BTKeyboard.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,10 @@
 				Base,
 			);
 			mainGroup = 9034341E290E831300BC9251;
+			packageReferences = (
+				90343439290E83FC00BC9251 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				9034343C290E849F00BC9251 /* XCRemoteSwiftPackageReference "Keyboard" */,
+			);
 			productRefGroup = 90343428290E831300BC9251 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,6 +366,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90343439290E83FC00BC9251 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		9034343C290E849F00BC9251 /* XCRemoteSwiftPackageReference "Keyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Keyboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9034343A290E83FC00BC9251 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90343439290E83FC00BC9251 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		9034343D290E849F00BC9251 /* Keyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9034343C290E849F00BC9251 /* XCRemoteSwiftPackageReference "Keyboard" */;
+			productName = Keyboard;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9034341F290E831300BC9251 /* Project object */;
 }
